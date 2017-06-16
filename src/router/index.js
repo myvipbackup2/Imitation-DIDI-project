@@ -14,7 +14,8 @@ import loader from '@/components/order/loader'
 import suggest from '@/components/suggest/suggest'
 import webError from '@/components/webError'
 import developing from '@/components/developing'
-Vue.use(Router)
+
+Vue.use(Router);
 
 export default new Router({
   routes: [
@@ -22,7 +23,7 @@ export default new Router({
       path: '/home/taxi',
       name: 'home',
       component: home,
-      alias:'/' || '/home',
+      alias: '/' || '/home',
       children: [
         {
           path: 'home/taxi',
@@ -42,13 +43,13 @@ export default new Router({
       ]
     },
     {
-      path:'/suggest',
+      path: '/suggest',
       name: 'suggest',
       component: suggest
     },
     {
-      path:'/user',
-      name:'user',
+      path: '/user',
+      name: 'user',
       component: user,
       children: [
         {
@@ -69,18 +70,18 @@ export default new Router({
       ]
     },
     {
-      path:'/order',
-      name:'order',
+      path: '/order',
+      name: 'order',
       component: order,
       children: [
         {
           path: '/order/loader',
-          name:'loader',
+          name: 'loader',
           component: loader
         },
         {
           path: '/order/accepte',
-          name:'accepte',
+          name: 'accepte',
           component: accepte
         }
       ]
