@@ -1,8 +1,8 @@
 <template>
-<div class="taxi-page">
-  <v-form></v-form>
-  <v-button bgc="#4a4c5b"  @click.native="order">呼叫出租车</v-button>
-</div>
+  <div class="taxi-page">
+    <v-form></v-form>
+    <v-button bgc="#4a4c5b" @click.native="order">呼叫快车</v-button>
+  </div>
 </template>
 <script>
   import vForm from '@/components/public/Form.vue'
@@ -18,14 +18,14 @@
     },
     components: {
       vForm,
-      vButton 
+      vButton
     },
     methods: {
       order () {
-        console.log(this.address.start || this.position.address,this.address.end )
-        if(this.address.start || this.position.address && this.address.end && this.islogined) {
-          this.$router.push({ path: 'order/loader' })
-        }else if( !this.islogined){
+        console.log(this.address.start || this.position.address, this.address.end)
+        if (this.address.start || this.position.address && this.address.end && this.islogined) {
+          this.$router.push({path: 'order/loader'})
+        } else if (!this.islogined) {
           this.$store.dispatch('telephone_input')
         }
       }
@@ -33,7 +33,7 @@
   }
 </script>
 <style>
-.taxi-page {
+  .taxi-page {
     position: absolute;
     padding: 10px;
     width: 100%;
@@ -42,5 +42,5 @@
     box-sizing: border-box;
     overflow: auto;
     font-size: 12px;
-}
+  }
 </style>

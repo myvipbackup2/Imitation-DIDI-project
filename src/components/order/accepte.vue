@@ -139,7 +139,7 @@
     position: relative;
     top: 0;
     z-index: 999;
-    margin: 10px 5% 0px;
+    margin: 10px 5% 0;
     box-shadow: 0 2px 3px rgba(0, 0, 0, .12);
   }
 

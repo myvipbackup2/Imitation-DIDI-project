@@ -6,7 +6,7 @@
     <v-mask v-show="ismask" :show="ismask"></v-mask>
     <!--<v-footer></v-footer>-->
     <!--<suggest v-if="suggest"></suggest>-->
-  
+
   </div>
 </template>
 
@@ -37,7 +37,7 @@ export default {
   methods: {
     // firstLocation() {
     //   if (!this.hasLocation) {
-        
+
     //   }
     // },
     ...mapActions([
